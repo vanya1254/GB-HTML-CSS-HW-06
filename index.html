@@ -16,12 +16,37 @@
             <img src="/img/search.svg" alt="search" class="search">
         </nav>
         <nav class="nav-right">
-            <img src="/img/nav-bar.svg" alt="nav bar" class="nav-bar">
+            <img onclick="display()" src="/img/nav-bar.svg" alt="nav bar" class="nav-bar">
             <img src="/img/profile.svg" alt="profile" class="profile">
             <img src="/img/cart.svg" alt="cart" class="cart">
+
+            <aside id="menu">
+                <section class="menu">
+                    <h4>Menu</h4>
+                    <div class="menu-content">
+                        <article class="man">
+                            <h4>Man</h4>
+                            <div class="column-menu"><a href="#">Accesories</a><a href="#">Bags</a><a
+                                    href="#">Denim</a><a href="#">T-shirts</a></div>
+                        </article>
+                        <article class="woman">
+                            <h4>Woman</h4>
+                            <div class="column-menu"><a href="#">Accesories</a><a href="#">Jackets
+                                    &amp;&nbsp;Coats</a><a href="#">Polos</a><a href="#">T-shirts</a><a
+                                    href="#">Shirts</a></div>
+                        </article>
+                        <article class="kids">
+                            <h4>Kids</h4>
+                            <div class="column-menu"><a href="#">Accesories</a><a href="#">Jackets
+                                    &amp;&nbsp;Coats</a><a href="#">Polos</a><a href="#">T-shirts</a><a
+                                    href="#">Shirts</a><a href="#">Bags</a>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+            </aside>
         </nav>
     </header>
-
 
     <div class="center bg">
         <div class="brand">
@@ -182,6 +207,16 @@
             <div class="icon-block"><img src="/img/icon4.svg" alt="twitter" class="icon"></div>
         </div>
     </footer>
+
+    <script>
+        function display() {
+            if (Number.parseInt(window.screen.width) >= Number.parseInt("1500px") && document.getElementById("menu").style.display != "block") {
+                document.getElementById("menu").style.display = "block";
+            } else {
+                document.getElementById("menu").style.display = "none";
+            }
+        }
+    </script>
 </body>
 
 </html>

@@ -18,6 +18,7 @@ body {
 }
 
 header {
+  z-index: 10000;
   position: fixed;
   top: 0;
   width: 100%;
@@ -42,8 +43,75 @@ header {
 }
 
 .nav-right {
+  position: relative;
   display: flex;
   gap: 33px;
+}
+
+aside {
+  display: none;
+}
+@media (max-width: 1499px) {
+  aside {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1500px) {
+  .nav-bar {
+    cursor: pointer;
+  }
+
+  aside {
+    border: none;
+    background: #fff;
+    position: absolute;
+    display: none;
+    z-index: 5;
+    width: 232px;
+    padding: 32px;
+    top: 52px;
+    right: -179px;
+  }
+
+  .menu {
+    display: flex;
+    flex-flow: column;
+    gap: 24px;
+    font-size: 14px;
+  }
+
+  .menu h4 {
+    color: #000;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .menu-content {
+    display: flex;
+    flex-flow: column;
+    gap: 20px;
+    padding-left: 1px;
+    font-weight: 400;
+  }
+
+  .menu-content article {
+    display: flex;
+    flex-flow: column;
+    gap: 12px;
+  }
+
+  .menu-content h4 {
+    color: #f16d7f;
+    font-weight: 400;
+  }
+
+  .column-menu {
+    display: flex;
+    flex-flow: column;
+    gap: 11px;
+    padding-left: 21.5px;
+  }
 }
 
 .brand {
